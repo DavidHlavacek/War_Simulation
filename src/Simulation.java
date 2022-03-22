@@ -71,7 +71,6 @@ public class Simulation
 		System.out.printf("\n%7s %25s %10s %10s %10s %10s" ,"|Type|", "|Name|", "|HP|", "|DMG|", "|SPD|", "|POW|\n");
 		for(Creature creature: array)
 		{
-			System.out.println();	
 			System.out.format("%7s %25s %10s %10s %10s %10s", i++, creature.getName(), creature.getHealth(), 
 			creature.getDamage(), creature.getSpeed(), creature.getSpecial());	
 			System.out.println();
@@ -87,7 +86,6 @@ public class Simulation
 		System.out.printf("\n\n%7s %10s" ,"|Type|", "|AMOUNT|\n");
 		for(int i = 0; i<n; i++)
 		{
-			System.out.println();	
 			System.out.format("%7s %10s", i, type[i]);
 			System.out.println();
 		}
@@ -153,7 +151,7 @@ public class Simulation
 		}				
 
 		clearScreen();
-		System.out.print("\033[100;0HPress  ENTER  to continue...");
+		System.out.print("\033[100;0HPress  ENTER  to continue... ");
 		getInput.nextLine();
 
 		Army army1 = new Army("Army1");
@@ -238,7 +236,7 @@ public class Simulation
 		}
 
 		clearScreen();
-		System.out.print("\033[80;0HPress  ENTER  to continue...");
+		System.out.print("\033[80;0HPress  ENTER  to continue... ");
 		getInput.nextLine();
 
 		while(true)
@@ -254,7 +252,7 @@ public class Simulation
 				Battle battlee = new Battle(army1, army2);
 				clearScreen();
 				battlee.fight();
-				System.out.print("\033[80;0HPress  ENTER  to continue...");
+				System.out.print("\033[80;0HPress  ENTER  to continue... ");
 				getInput.nextLine();
 				break;
 			}	
@@ -266,7 +264,7 @@ public class Simulation
 				int choiceSimulation = getInput.nextInt();
 				getInput.nextLine();
 				Simulation simulation = new Simulation(battleee, choiceSimulation);
-				System.out.print("\033[80;0HPress  ENTER  to continue...");
+				System.out.print("\033[80;0HPress  ENTER  to continue... ");
 				getInput.nextLine();	
 				break;
 			}
