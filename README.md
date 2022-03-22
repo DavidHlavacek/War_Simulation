@@ -2,7 +2,7 @@
 
 ## Quick Description:
 
-Add any number of types of creatures [Name, HP, DMG, speed, special].
+Add any number of types of creature [Name, HP, DMG, speed, special].
 Add any number of creatures of a type into an army.
 Simulate any number of battles between these two armies.
 
