@@ -212,17 +212,19 @@ public class Battle
 			this.setRounds(getRounds()+1);		
 		}	
 		Army winner = (army1.getSize()>army2.getSize())?army1:army2;
-		System.out.println("Winner: " + winner.getName());
-		System.out.println("Rounds: " + this.getRounds());
+		System.out.println("\n\n------------" + "Simulation " + Simulation.simulation++ + "------------\n");
+		System.out.println("\tWinner: " + winner.getName());
+		System.out.println("\tRounds: " + this.getRounds());
 		int count = 0;
-		System.out.println("\nAlive: ");
+		System.out.println("\n\n\t   Alive: \n");
 		for(Creature creature: winner.getCreatures())
 		{
-			System.out.println(creature.getName() + " HP: " + creature.getHealth());
+			System.out.println("\t"+creature.getName() + " | HP: " + creature.getHealth());
 
 			count++;
 		}
-		System.out.println("Total: " + count);
+		System.out.println("\n\tTotal: " + count);
+		System.out.println("\n-----------------------------------------\n\n");
 		return winner;
 
 		

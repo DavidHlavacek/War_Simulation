@@ -10,6 +10,7 @@ public class Simulation
 	private ArrayList<Creature> army1C, army2C;
 	int army1W = 0;
 	int army2W = 0;
+	static int simulation = 1;
 
 	public Simulation(Battle battle, int repetition)
 	{
@@ -50,9 +51,12 @@ public class Simulation
 
 				
 		}
-		System.out.println("\n\nArmy 1: " + army1W + " wins");
-		System.out.println("Army 2: " + army2W + " wins");
-		
+		System.out.println("\n\n\n\n+++++++++++++++++++++++++++++++++++++++++++");
+		System.out.println("\n\t\tArmy 1: " + army1W + " wins");
+		System.out.println("\t\tArmy 2: " + army2W + " wins");
+		System.out.println("\t\tUltimate Winner:");
+		System.out.println("\n\t\t    " + ((army1W>army2W)?"Army 1":"Army 2"));
+		System.out.println("\n+++++++++++++++++++++++++++++++++++++++++++\n\n\n");		
 	}
 	
 	public static void main(String[] args){
@@ -78,12 +82,12 @@ public class Simulation
 		Army army2 = new Army("Army2");
 		
 		army1.addCreature(creature1, 5);
-		// army1.addCreature(creature3, 20);
-		// army1.addCreature(creature4, 1);
+		army1.addCreature(creature3, 20);
+		army1.addCreature(creature4, 1);
 
 		army2.addCreature(creature1, 5);
-		// army2.addCreature(creature2, 20);
-		// army2.addCreature(creature4, 1);
+		army2.addCreature(creature2, 20);
+		army2.addCreature(creature4, 1);
 
 	
 		
