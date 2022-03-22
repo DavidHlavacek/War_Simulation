@@ -8,6 +8,8 @@ public class Battle
 
 	Army army1, army2;
 	int rounds;
+	private Random random = new Random();
+	static long seed = 0L;
 
 	//Constructor
 	public Battle(Army army1, Army army2)
@@ -55,7 +57,7 @@ public class Battle
 		ArrayList<Creature> array = army1.getCreatures();
 		if(!array.isEmpty())
 		{	
-			int index = new Random().nextInt(array.size());
+			int index = random.nextInt(array.size());
 			Creature creature = array.get(index);
 			return creature;
 		}
@@ -67,7 +69,7 @@ public class Battle
 		ArrayList<Creature> array = army2.getCreatures();
 		if(!array.isEmpty())
 		{
-			int index = new Random().nextInt(array.size());
+			int index = random.nextInt(array.size());
 			Creature creature = array.get(index);
 			return creature;
 		}
@@ -76,7 +78,7 @@ public class Battle
 
 	public int getPriority(Creature c1, Creature c2)
 	{
-		if(c1.getSpeed() == c2.getSpeed()){return (new Random().nextInt(3-1)+1);}
+		if(c1.getSpeed() == c2.getSpeed()){return (random.nextInt(3-1)+1);}
 		return (c1.getSpeed() > c2.getSpeed()) ? 1:2;
 	}
 
@@ -183,7 +185,7 @@ public class Battle
 		}	
 	}
 
-	public void fight()
+	public Army fight()
 	{
 		while(!(army1.getCreatures().isEmpty()) && !(army2.getCreatures().isEmpty()))
 		{
@@ -221,7 +223,11 @@ public class Battle
 			count++;
 		}
 		System.out.println("\nTotal: " + count);	
+		return winner;
 
 		
 	}
+
+	
+
 }
