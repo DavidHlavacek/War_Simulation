@@ -1,4 +1,4 @@
-#WAR SIMULATOR
+# WAR SIMULATOR
 
 `git clone https://github.com/DavidHlavacek/War_Simulation.git`
 
