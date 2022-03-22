@@ -10,7 +10,7 @@ public class Creature
 	private int speed;
 	private int special;
 	private Army army;
-	
+	private int type;
 	//Constructor
 	public Creature(String name, int health, int damage, int speed, int special)
 	{
@@ -21,8 +21,19 @@ public class Creature
 		this.speed = speed;
 		this.special = special;
 		this.army = null;
+		this.type = Simulation.type++;
 	}
-
+	public Creature(String name, int health, int damage, int speed, int special, int type)
+	{
+		this.name = name;
+		this.max_health = health;
+		this.health = health;
+		this.damage = damage;
+		this.speed = speed;
+		this.special = special;
+		this.army = null;
+		this.type = type++;
+	}
 	//Getters
 	public String getName()
 	{
@@ -59,7 +70,17 @@ public class Creature
 		return this.army;
 	}
 
+	public int getType()
+	{
+		return type;
+	}
+
 	//Setter
+	public void setType(int type)
+	{
+		this.type = type;
+	}
+
 	public void setName(String name)
 	{
 		this.name = name;

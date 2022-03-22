@@ -54,7 +54,7 @@ public class Army
 		for(int x = 0; x < copies; x++)
 		{
 			Creature shallowCopy = new Creature(creature.getName(), creature.getHealth(), 
-								creature.getDamage(), creature.getSpeed(), creature.getSpecial());
+								creature.getDamage(), creature.getSpeed(), creature.getSpecial(), creature.getType());
 			shallowCopy.setArmy(this);
 			this.creatures.add(shallowCopy);
 		}
