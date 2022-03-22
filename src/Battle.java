@@ -1,7 +1,6 @@
 package src;
 
 import java.util.*;
-import java.io.*;
 
 public class Battle
 {
@@ -10,6 +9,7 @@ public class Battle
 	int rounds;
 	private Random random = new Random();
 	static long seed = 0L;
+
 
 	//Constructor
 	public Battle(Army army1, Army army2)
@@ -215,14 +215,14 @@ public class Battle
 		System.out.println("Winner: " + winner.getName());
 		System.out.println("Rounds: " + this.getRounds());
 		int count = 0;
-		System.out.println("Alive: ");
+		System.out.println("\nAlive: ");
 		for(Creature creature: winner.getCreatures())
 		{
 			System.out.println(creature.getName() + " HP: " + creature.getHealth());
 
 			count++;
 		}
-		System.out.println("\nTotal: " + count);	
+		System.out.println("Total: " + count);
 		return winner;
 
 		
