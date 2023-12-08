@@ -10,6 +10,6 @@ Simulate any number of battles between these two armies.
 
 `cd War_Simulation`
 
-and then just run `java -cp bin src/Simulation.java`
+and then just run `java src/Simulation`
 
 the readme will be updated. 
