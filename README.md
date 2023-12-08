@@ -8,6 +8,8 @@ Simulate any number of battles between these two armies.
 
 `git clone https://github.com/DavidHlavacek/War_Simulation.git`
 
+`cd War_Simulation`
+
 and then just run `java -cp bin src/Simulation.java`
 
 the readme will be updated. 
